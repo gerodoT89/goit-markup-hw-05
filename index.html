@@ -48,7 +48,7 @@
         <section class="section-background-color main-container">
             <div class="container">
             <h1 class="section-effective-solutions">Эффективные решения для вашего бизнеса</h1>
-            <button class="button-style" type="button"> Заказать услугу</button>
+            <button type="button" class="button-style" data-modal-open> Заказать услугу</button>
         </div>
     </section>
 
@@ -378,6 +378,16 @@
             </div>
         </div>  
     </footer>
+<div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+        <button type="button" class="modal-close" data-modal-close>
+        <svg class="close-icon-modal" width="18px" heigt="18px">
+            <use href="./images/close.svg#icon-close"></use>
+        </svg>
+    </button>
+    </div>
+</div>
+<script src="js/modal.js"></script>
 </body>
 
 </html>

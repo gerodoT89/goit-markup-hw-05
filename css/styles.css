@@ -633,38 +633,36 @@ img {
   border-bottom: 1px solid #ececec;
   border-left: 1px solid #ececec;
   border-right: 1px solid #ececec;
+  border-top-style: none;
 }
+/* эффекты текста списка ссылок портфолио */
 .item-discription-box {
   position: relative;
   overflow: hidden;
 }
 .portfolio-item-discription {
   position: absolute;
-  width: 100%;
-  height: 294px;
+  height: 100%;
   top: 0;
   left: 0;
   display: flex;
   align-items: center;
   padding: 63px 24px;
-
   font-size: 18px;
   line-height: 1.55;
   color: var(--main-batton-address-color);
   background-color: rgba(33, 150, 243, 0.9);
-  opacity: 0;
   transition-property: transform;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateY(100%);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.portfolio-image:hover,
-.portfolio-item-discription {
+/* ховер списка ссылок портфолио */
+.list-text-decor:hover .portfolio-item-discription,
+.list-text-decor:focus .portfolio-item-discription {
   transform: translateY(0);
-  opacity: 1;
 }
-
+/* тень боксов списка ссылок портфолио */
 .list-text-decor:hover,
 .list-text-decor:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
@@ -696,6 +694,7 @@ img {
 }
 .main-name-section {
   display: list-item;
+  font-family: inherit;
   font-style: Medium;
   font-weight: 500;
   font-size: 16px;
@@ -738,4 +737,48 @@ img {
 .footer-border {
   border-style: solid 1px #000000;
   box-shadow: 0 4px 4px 0 #000000;
+}
+/* Бэкдроп модалки */
+.backdrop {
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  transition: opacity 500ms, visibility 500ms;
+}
+
+.modal {
+  position: absolute;
+  width: 528px;
+  height: 581px;
+  top: 50%;
+  left: 50%;
+  background-color: var(--main-batton-address-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transform: translate(-50%, -50%) scale(1);
+}
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 30px;
+  height: 30px;
+
+  background-color: var(--main-batton-address-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }

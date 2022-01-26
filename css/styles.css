@@ -242,8 +242,7 @@ img {
 }
 .button-style:hover,
 .button-style:focus {
-  background-color: var(--main-batton-address-color);
-  color: var(--accent-color);
+  background-color: #188ce8;
 }
 /*------Секция рода занятий нашей организации--*/
 .list-about:not(:last-child) {

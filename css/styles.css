@@ -87,7 +87,6 @@ img {
 }
 /* Нижнее подчеркивание в хедере */
 .current {
-  color: var(--accent-color);
   position: relative;
 }
 .current::after {
@@ -98,11 +97,23 @@ img {
   position: absolute;
   left: 0;
   background-color: var(--accent-color);
-  bottom: -28px;
+  bottom: -30px;
 }
-
+.current-portfolio {
+  position: relative;
+}
+.current-portfolio::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  background-color: var(--accent-color);
+  bottom: -34px;
+}
 .border-header {
-  border: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
 }
 .social-link:hover,
 .social-link:focus {
@@ -561,6 +572,7 @@ img {
   text-align: left;
   text-transform: uppercase;
   margin-bottom: 20px;
+  display: block;
 }
 .right-footer-list {
   display: flex;
@@ -653,7 +665,7 @@ img {
   background-color: rgba(33, 150, 243, 0.9);
   transition-property: transform;
   transition-duration: 250ms;
-  transform: translateY(100%);
+  transform: translateY(101%);
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* ховер списка ссылок портфолио */
